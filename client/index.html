@@ -1,0 +1,76 @@
+<html ng-app="myApp">
+<head>
+	<title>BookStore</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="assets/img/favicon.png">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css"
+	type="text/css">
+<link rel="stylesheet" href="assets/css/jasny-bootstrap.min.css"
+	type="text/css">
+<link rel="stylesheet" href="assets/css/jasny-bootstrap.min.css"
+	type="text/css">
+<!-- Material CSS -->
+<link rel="stylesheet" href="assets/css/material-kit.css"
+	type="text/css">
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="assets/css/font-awesome.min.css"
+	type="text/css">
+<!-- Line Icons CSS -->
+<link rel="stylesheet" href="assets/fonts/line-icons/line-icons.css"
+	type="text/css">
+<!-- Line Icons CSS -->
+<link rel="stylesheet" href="assets/fonts/line-icons/line-icons.css"
+	type="text/css">
+<!-- Main Styles -->
+<link rel="stylesheet" href="assets/css/main.css" type="text/css">
+<!-- Animate CSS -->
+<link rel="stylesheet" href="assets/extras/animate.css" type="text/css">
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="assets/extras/owl.carousel.css"
+	type="text/css">
+<link rel="stylesheet" href="assets/extras/owl.theme.css"
+	type="text/css">
+<!-- Responsive CSS Styles -->
+<link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+<!-- Slicknav js -->
+<link rel="stylesheet" href="assets/css/slicknav.css" type="text/css">
+<!-- Bootstrap Select -->
+<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div ng-include="'views/header/header.html'"></div>
+	</div>
+   
+    <div class="container">
+    	<div class="row">
+    		<div class="col-md-12">
+    			<div ng-view></div>
+    		</div>
+    	</div>
+     </div>
+    
+   
+	<div ng-include="'views/services/services.html'"></div>
+	
+    <div class="footer">
+		<div ng-include="'views/footer/footer.html'"></div>
+		<div ng-include="'views/about/about.html'"></div>
+	</div>
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-route/angular-route.js"></script>
+	<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/app-ui.js"></script>
+	<script src="/controllers/books.js"></script>
+	<script src="/controllers/genres.js"></script>
+	<script src="/controllers/search.js"></script>
+	
+</body>
+</html>

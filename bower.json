@@ -1,0 +1,17 @@
+{
+  "name": "bookstore",
+  "description": "Simple bookstore app",
+  "main": "app.js",
+  "authors": [
+    "Brad Traversy"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

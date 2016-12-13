@@ -1,0 +1,44 @@
+<!-- Start intro section -->
+<section id="intro" class="section-intro">
+	<div class="container">
+		<div class="main-text">
+			<h1 class="intro-title">
+				Welcome To <span style="color: #3498DB">Store Search</span>
+			</h1>
+			<p class="sub-title">Search for Book Store</p>
+			<!-- Start Search box -->
+			
+				<div class="advanced-search">
+					<form class="search-form" method="get">
+
+						<div class="col-md-3 col-sm-6 search-col">
+							<input type="text"  class="form-control"
+								 ng-model="city" place-holder="City or Pincode or State"/>
+						</div>
+						<div class="col-md-3 col-sm-6 search-col">
+							<button class="btn btn-common btn-search btn-block" ng-click="getSearch()">
+								<strong>Search</strong>
+							</button>
+						</div>
+					</form>
+				</div>
+		
+			<!-- End Search box -->
+		</div>
+	</div>
+</section>
+<div ng-show="isResult">
+	<br/><br/>
+	<div> Search result</div>
+	<br/>
+	<div ng-repeat="x in result">
+	  
+	  <div class="panel panel-default">
+	    <div class="panel-heading">{{x.name}}</div>
+	    <div class="panel-body">
+	    	{{x.name}}     {{x.city}}
+	    </div>
+	</div>
+</div>
+</div>
+
