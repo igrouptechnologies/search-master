@@ -1,15 +1,20 @@
 {
-  "name": "search master",
+  "name": "search-master",
   "version": "1.0.0",
-  "description": "search master",
+  "description": "search-master",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies":{
-  	"express":"*",
-  	"body-parser":"*",
-  	"mongoose":"*"
+  "dependencies": {
+    "angular": "^1.6.0",
+    "angular-animate": "^1.6.0",
+    "angular-route": "^1.6.0",
+    "angular-sanitize": "^1.6.0",
+    "angular-ui-bootstrap": "^2.3.1",
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "*"
   },
   "author": "Alpesh",
   "license": "iGroup"

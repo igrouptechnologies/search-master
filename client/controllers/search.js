@@ -7,7 +7,7 @@ myApp.controller('SearchController', ['$scope', '$http', '$location', '$routePar
 	$scope.getSearch = function(){
 		console.log("Search Invoked");
 		
-		$http.get('/api/schools').success(function(response){
+		$http.get('/api/schools').then(function(response){
 			$scope.result = response;
 			$scope.isResult = true;
 			console.log(response);
