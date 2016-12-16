@@ -28,17 +28,34 @@
 	</div>
 </section>
 <div ng-show="isResult">
-	<br/><br/>
+<!-- 	<br/><br/>
 	<div> Search result</div>
-	<br/>
-	<div ng-repeat="x in result">
-	  
-	  <div class="panel panel-default">
-	    <div class="panel-heading">{{x.name}}</div>
-	    <div class="panel-body">
-	    	{{x.name}}     {{x.city}}
-	    </div>
+	<select ng-model="viewby" ng-change="setItemsPerPage(viewby)">
+		<option>3</option>
+		<option>5</option>
+		<option>10</option>
+		<option>20</option>
+		<option>30</option>
+		<option>40</option>
+		<option>50</option>
+	</select> 
+
+	<br/> -->
+	<div ng-repeat="x in filteredResult">
+
+		<div class="panel panel-default">
+			<div class="panel-heading">{{x.name}}</div>
+			<div class="panel-body">{{x.name}} at {{x.city}}</div>
+		</div>
+		
+
 	</div>
-</div>
+	Total Pages : {{totalItems}} Current Pages : {{currentPage}}
+	 <pagination
+				    max-size="3" 
+					    items-per-page="itemsPerPage"
+						    total-items="totalItems" 
+							    ng-model="currentPage" 
+							    	ng-change="pageChanged()"></pagination>
 </div>
 
