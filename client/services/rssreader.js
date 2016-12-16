@@ -1,6 +1,8 @@
 var feed = require("feed-read");
 
-var getRssFeedData = function(input, callback)
+RSSService.factory('RSSService',function(){
+	return {
+		getRssFeedData : function(input,callback)
 		{
 			var rss = []
 			feed(input, function(err, articles) {
@@ -12,9 +14,5 @@ var getRssFeedData = function(input, callback)
 			  callback(rss);
 			});
 		}
-
-
-getRssFeedData("https://news.google.com/?output=rss",function(rss){
-	console.log(rss);
+	}
 });
-
