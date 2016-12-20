@@ -38,6 +38,9 @@ var userSchema = mongoose.Schema({
 	phone:{
 		type: [String]
 	},
+	active:{
+		type: Boolean
+	},
 	create_date:{
 		type: Date,
 		default: Date.now
