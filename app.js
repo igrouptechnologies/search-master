@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 Genre =require('./models/genre');
 Book =require('./models/book');
 School= require('./models/school')
+User= require('./models/user')
 // Connect to Mongoose
 mongoose.connect('mongodb://localhost/wis');
 var db = mongoose.connection;
