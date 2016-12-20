@@ -1,53 +1,38 @@
+var myApp = angular.module('myApp');
 
-//-----------------users----------------------
+myApp.controller('UsersController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
+	console.log('UsersController loaded...');
 
-app.get('/api/users', function(req, res){
-	console.log("List of User-->");
-	User.getusers(function(err, users){
-		if(err){
-			throw err;
-		}
-		console.log("List of User-->" + users);
-		res.json(users);
-	});
-});
+	$scope.getUsers = function(){
+		$http.get('/api/users').success(function(response){
+			$scope.users = response;
+		});
+	}
 
-app.get('/api/users/:_id', function(req, res){
-	User.getUserById(req.params._id, function(err, user){
-		if(err){
-			throw err;
-		}
-		res.json(user);
-	});
-});
+	$scope.getUser = function(){
+		var id = $routeParams.id;
+		$http.get('/api/users/'+id).success(function(response){
+			$scope.user = response;
+		});
+	}
 
-app.post('/api/users', function(req, res){
-	var user = req.body;
-	User.addUser(user, function(err, user){
-		if(err){
-			throw err;
-		}
-		res.json(user);
-	});
-});
+	$scope.addUser = function(){
+		console.log($scope.user);
+		$http.post('/api/users/', $scope.user).success(function(response){
+			window.location.href='#/users';
+		});
+	}
 
-app.put('/api/users/:_id', function(req, res){
-	var id = req.params._id;
-	var user = req.body;
-	User.updateUser(id, user, {}, function(err, user){
-		if(err){
-			throw err;
-		}
-		res.json(user);
-	});
-});
+	$scope.updateUser = function(){
+		var id = $routeParams.id;
+		$http.put('/api/users/'+id, $scope.user).success(function(response){
+			window.location.href='#/users';
+		});
+	}
 
-app.delete('/api/users/:_id', function(req, res){
-	var id = req.params._id;
-	User.removeUser(id, function(err, user){
-		if(err){
-			throw err;
-		}
-		res.json(user);
-	});
-});
+	$scope.removeUser = function(id){
+		$http.delete('/api/users/'+id).success(function(response){
+			window.location.href='#/users';
+		});
+	}
+}]);
