@@ -1,6 +1,6 @@
 var feed = require("feed-read");
 
-RSSService.factory('RSSService',function(){
+angular.module('myApp').factory('RSSService',function(){
 	return {
 		getRssFeedData : function(input,callback)
 		{

@@ -1,9 +1,12 @@
 
-angular.module('myApp').controller('SearchController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
+angular.module('myApp').controller('SearchController', 
+		['$scope', '$http', '$location', '$routeParams', 
+		 function($scope, $http, $location, $routeParams){
 	console.log('SearchController loaded...');
 	$scope.filteredResult = [];
 	$scope.itemsPerPage = 5;
 	$scope.currentPage = 1;
+	$scope.isResult = false;
 	
 	
 	$scope.getSearch = function(){
@@ -18,7 +21,7 @@ angular.module('myApp').controller('SearchController', ['$scope', '$http', '$loc
 			
 			$scope.maxSize = 5; //Number of pager buttons to show
 			
-			for (var i=1;i<=response.data.length;i++) 
+			for (var i=0;i<response.data.length;i++) 
 			{
 				$scope.result.push(response.data[i]);
 				//console.log(response.data[i]);
@@ -31,6 +34,20 @@ angular.module('myApp').controller('SearchController', ['$scope', '$http', '$loc
 
 
 	}
+	
+	 $scope.clearAll = function() {
+		console.log("clearAll Invoked");
+		$scope.filteredResult = [];
+		$scope.itemsPerPage = 5;
+		$scope.currentPage = 1;
+		$scope.isResult = false;
+	};
+	
+	
+	
+//	RSSService.getRssFeedData("http://feeds.feedburner.com/ndtvnews-top-stories", "http://feeds.feedburner.com/ndtvnews-top-stories",function(rss){
+//		console.log(rss);
+//	});
 	
 	 $scope.displayResult = function() {
 		    var begin = (($scope.currentPage - 1) * $scope.itemsPerPage);
