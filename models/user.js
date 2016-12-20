@@ -5,13 +5,17 @@ var userSchema = mongoose.Schema({
 	
 	firstname:{
 		type: String,
-		required: true
+		//required: true
 	},
 	lastname:{
 		type: String,
-		required: true
+		//required: true
 	},
 	username:{
+		type: String,
+		required: true
+	},
+	password:{
 		type: String,
 		required: true
 	},
@@ -20,7 +24,7 @@ var userSchema = mongoose.Schema({
 	},
 	city:{
 		type: String,
-		required: true
+		//required: true
 	},
 	state:{
 		type: String
