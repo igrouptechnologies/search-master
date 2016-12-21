@@ -45,14 +45,27 @@ var School = module.exports = mongoose.model('School', schoolSchema);
 
 // Get Schools
 //Get Books
-module.exports.getSchools = function(callback, limit){
-	School.find(callback).limit(limit);
+module.exports.getSchoolsByName = function(name , callback, limit){
+	School.find({'name' : new RegExp(name,'i')},callback).limit(limit);
+}
+
+module.exports.getSchoolsByZipcode = function(zipcode , callback, limit){
+	School.find({'zipcode' : zipcode },callback).limit(limit);
 }
 
 
-// Get School
-module.exports.getSchoolById = function(id, callback){
-	School.findById(id, callback);
+module.exports.getSchoolsByCity = function(city , callback, limit){
+	School.find({'city' : city },callback).limit(limit);
+}
+
+//// Get School
+//module.exports.getSchoolById = function(id, callback){
+//	School.findById(id, callback);
+//}
+
+//Get School
+module.exports.getSchoolByName = function(name, callback){
+	School.find({name : name}, callback);
 }
 
 // Add School

@@ -9,28 +9,28 @@ myApp.controller('SchoolsController', ['$scope', '$http', '$location', '$routePa
 		});
 	}
 
-	$scope.getBook = function(){
+	$scope.getSchool = function(){
 		var id = $routeParams.id;
 		$http.get('/api/schools/'+id).success(function(response){
-			$scope.book = response;
+			$scope.school = response;
 		});
 	}
 
-	$scope.addBook = function(){
-		console.log($scope.book);
-		$http.post('/api/schools/', $scope.book).success(function(response){
+	$scope.addSchool = function(){
+		console.log($scope.school);
+		$http.post('/api/schools/', $scope.school).success(function(response){
 			window.location.href='#/schools';
 		});
 	}
 
-	$scope.updateBook = function(){
+	$scope.updateSchool = function(){
 		var id = $routeParams.id;
-		$http.put('/api/schools/'+id, $scope.book).success(function(response){
+		$http.put('/api/schools/'+id, $scope.school).success(function(response){
 			window.location.href='#/schools';
 		});
 	}
 
-	$scope.removeBook = function(id){
+	$scope.removeSchool = function(id){
 		$http.delete('/api/schools/'+id).success(function(response){
 			window.location.href='#/schools';
 		});

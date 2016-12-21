@@ -10,9 +10,10 @@ angular.module('myApp').controller('SearchController',
 	
 	
 	$scope.getSearch = function(){
+		var search = $scope.search;
 		console.log("Search Invoked");
 		$scope.result = [];
-		$http.get('/api/schools').
+		$http.get('/api/schools/'+search).
 		  then(function onSuccess(response) {
 		    // Handle success
 			//$scope.result = response;

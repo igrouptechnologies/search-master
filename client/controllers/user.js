@@ -15,6 +15,21 @@ myApp.controller('UsersController', ['$scope', '$http', '$location', '$routePara
 			$scope.user = response;
 		});
 	}
+	
+	$scope.login = function(){
+		var username = $scope.username;
+		//console.log($scope.user);
+		$http.get('/api/users/'+username).success(function(response){
+			console.log(response);
+			if($response.password === $scope.password)
+			{
+				console.log("User is validated");
+			}else{
+				console.log("User is not authorized");
+			}
+			
+		});
+	}
 
 	$scope.addUser = function(){
 		console.log($scope.user);

@@ -121,14 +121,23 @@ app.get('/api/schools', function(req, res){
 	});
 });
 
-app.get('/api/schools/:_id', function(req, res){
-	School.getSchoolById(req.params._id, function(err, school){
+app.get('/api/schools/:search', function(req, res){
+	School.getSchoolsByName(req.params.search, function(err, school){
 		if(err){
 			throw err;
 		}
 		res.json(school);
 	});
 });
+
+//app.get('/api/schools/:_id', function(req, res){
+//	School.getSchoolById(req.params._id, function(err, school){
+//		if(err){
+//			throw err;
+//		}
+//		res.json(school);
+//	});
+//});
 
 app.post('/api/schools', function(req, res){
 	var book = req.body;
