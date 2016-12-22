@@ -6,10 +6,10 @@ var mongoose = require('mongoose');
 app.use(express.static(__dirname+'/client'));
 app.use(bodyParser.json());
 
-Genre =require('./models/genre');
-Book =require('./models/book');
-School= require('./models/school')
-User= require('./models/user')
+var Genre =require('./models/genre');
+var Book =require('./models/book');
+var School= require('./models/school')
+var User= require('./models/user')
 // Connect to Mongoose
 mongoose.connect('mongodb://localhost/wis');
 var db = mongoose.connection;
@@ -182,8 +182,8 @@ app.get('/api/users', function(req, res){
 	});
 });
 
-app.get('/api/users/:_id', function(req, res){
-	User.getUserById(req.params._id, function(err, user){
+app.get('/api/users/:username', function(req, res){
+	User.getUserByUserName(req.params.username, function(err, user){
 		if(err){
 			throw err;
 		}

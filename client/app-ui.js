@@ -7,8 +7,13 @@ myApp.config(function($routeProvider){
 		templateUrl: 'views/search/search.html'
 	})
 	.when('/home', { templateUrl: 'views/search/search.html'})
-	.when('/login', { templateUrl: 'views/login.html'})
-	.when('/signup', {templateUrl: 'views/signup.html'})
+	.when('/login', { 
+		controller:'UserController',
+		templateUrl: 'views/login/login.html'})
+	.when('/signup', {
+		controller:'UserController',
+		templateUrl: 'views/login/signup.html'
+			})
 	.when('/books', {
 		controller:'BooksController',
 		templateUrl: 'views/books.html'
