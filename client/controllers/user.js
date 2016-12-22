@@ -24,6 +24,14 @@ angular.module('myApp').controller('UserController',
            	console.log("session start : " + $scope.user);
 		});
 	}
+    
+    $scope.forgetpassword = function(){
+        var user = $scope.user;
+        console.log("login method invoke");
+        $http.get('/api/users/'+user.username).success(function(response){
+           	console.log("session start : " + $scope.user);
+		});
+	}
 	
 	
 }]);
