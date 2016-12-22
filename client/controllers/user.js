@@ -7,10 +7,14 @@ angular.module('myApp').controller('UserController',
 	
 	$scope.register = function(){
         console.log("register method invoke");
-        $http.post('/api/users/', $scope.user).success(function(response){
-			console.log("session start : " + $scope.user);
-            
-		});
+        if($scope.user.password === $scope.user.retypepassword) 
+        {
+	        $http.post('/api/users/', $scope.user).success(function(response){
+				console.log("session start : " + JSON.stringify($scope.user));
+			});
+        }else{
+        	console.log("Both password are not same");
+        }
 	}
     
     $scope.login = function(){
