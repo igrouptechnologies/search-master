@@ -3,6 +3,9 @@ angular.module('myApp').controller('UserController',
 		['$scope', '$http', '$location', '$routeParams', 
 		 function($scope, $http, $location, $routeParams){
 	console.log('UserController loaded...');
+
+	$scope.loginmsg = false;
+	$scope.registermsg = false;
 	
 	
 	$scope.register = function(){
@@ -11,6 +14,8 @@ angular.module('myApp').controller('UserController',
         {
 	        $http.post('/api/users/', $scope.user).success(function(response){
 				console.log("session start : " + JSON.stringify($scope.user));
+				$scope.registermsg = true;
+				$scope.message="User is register successfully";
 			});
         }else{
         	console.log("Both password are not same");
@@ -22,6 +27,8 @@ angular.module('myApp').controller('UserController',
         console.log("login method invoke");
         $http.get('/api/users/'+user.username).success(function(response){
            	console.log("session start : " + $scope.user);
+           	$scope.loginmsg = true;
+           	$scope.message ="Logged user successfully";
 		});
 	}
     
