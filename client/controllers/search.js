@@ -1,12 +1,21 @@
 
 angular.module('myApp').controller('SearchController', 
-		['$scope', '$http', '$location', '$routeParams', 
-		 function($scope, $http, $location, $routeParams){
+		['$scope', '$http', '$location', '$routeParams','FeedService', 
+		 function($scope, $http, $location, $routeParams,FeedService){
 	console.log('SearchController loaded...');
 	$scope.filteredResult = [];
 	$scope.itemsPerPage = 5;
 	$scope.currentPage = 1;
 	$scope.isResult = false;
+	
+
+	FeedService.parseFeed("http://feeds.feedburner.com/ndtvnews-top-stories").then(function(res){
+//        $scope.loadButonText=angular.element(e.target).text();
+//        $scope.feeds=res.data.responseData.feed.entries;
+		console.log("FeedService call ");
+		console.log(res.data.responseData.feed.entries);
+    }); 
+
 	
 	
 	$scope.getSearch = function(){
