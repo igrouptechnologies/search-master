@@ -10,6 +10,8 @@ var Genre =require('./models/genre');
 var Book =require('./models/book');
 var School= require('./models/school')
 var User= require('./models/user')
+
+var schoolapi = require('./api/routes/school');
 // Connect to Mongoose
 mongoose.connect('mongodb://localhost/wis');
 var db = mongoose.connection;
@@ -169,6 +171,9 @@ app.delete('/api/schools/:_id', function(req, res){
 		res.json(school);
 	});
 });
+
+
+//app.use(schoolapi);
 
 //----------------User--------------------------
 app.get('/api/users', function(req, res){

@@ -14,8 +14,10 @@
     "angular-ui-bootstrap": "^2.3.1",
     "body-parser": "*",
     "express": "*",
+    "feed-read": "0.0.1",
     "mongoose": "*",
-    "feed-read":"0.0.1"
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1"
   },
   "author": "Alpesh",
   "license": "iGroup"

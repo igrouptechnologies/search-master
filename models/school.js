@@ -44,7 +44,12 @@ var schoolSchema = mongoose.Schema({
 var School = module.exports = mongoose.model('School', schoolSchema);
 
 // Get Schools
-//Get Books
+
+
+module.exports.getSchools = function(name , callback, limit){
+	School.find({},callback).limit(limit);
+}
+
 module.exports.getSchoolsByName = function(name , callback, limit){
 	School.find({'name' : new RegExp(name,'i')},callback).limit(limit);
 }
