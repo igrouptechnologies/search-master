@@ -11,3 +11,10 @@ Just clone or download and run **npm install** and then **node app** to start
 The Genres Angular controller is blank on purpose. This is for you to try and come up with after watching the video. It may be added in the future
 
 # search-master
+
+
+Social to share Button : 
+
+http://plnkr.co/edit/TQoIJ2?p=preview
+
+
