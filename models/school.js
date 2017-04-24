@@ -42,6 +42,9 @@ var schoolSchema = mongoose.Schema({
 	create_date:{
 		type: Date,
 		default: Date.now
+	},
+	deviceid :{
+		type: String
 	}
 });
 

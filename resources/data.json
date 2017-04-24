@@ -1,3 +1,7 @@
+
+Always user header : Content-Type : application/json for all request form postman.
+
+
 {
     "_id" : ObjectId("58434da482139207a2bfbbab"),
     "id" : 1,
