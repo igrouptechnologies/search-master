@@ -8,19 +8,19 @@ angular.module('myApp').controller('SearchController',
 	$scope.currentPage = 1;
 	$scope.isResult = false;
 	
-
-	FeedService.parseFeed("https://feeds.feedburner.com/EducationWeekNewsAndInformationAboutEducationIssues").then(function(res){
-//        $scope.loadButonText=angular.element(e.target).text();
-//        $scope.feeds=res.data.responseData.feed.entries;
-//		console.log("FeedService call ");
-//		console.log(res.data.responseData.feed.entries);
-		
-		for(var i =0; i<res.data.responseData.feed.entries.length;i++)
-			{
-			console.log(res.data.responseData.feed.entries[i].title);
-			}
-		
-    }); 
+//
+//	FeedService.parseFeed("https://feeds.feedburner.com/EducationWeekNewsAndInformationAboutEducationIssues").then(function(res){
+////        $scope.loadButonText=angular.element(e.target).text();
+////        $scope.feeds=res.data.responseData.feed.entries;
+////		console.log("FeedService call ");
+////		console.log(res.data.responseData.feed.entries);
+//		
+//		for(var i =0; i<res.data.responseData.feed.entries.length;i++)
+//			{
+//			console.log(res.data.responseData.feed.entries[i].title);
+//			}
+//		
+//    }); 
 
 	
 	

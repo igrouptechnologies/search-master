@@ -30,6 +30,10 @@ myApp.config(function($routeProvider){
 		controller:'BooksController',
 		templateUrl: 'views/edit_book.html'
 	})
+	.when('/schools/add', {
+		controller:'SchoolsController',
+		templateUrl: 'views/add_school.html'
+	})
 	.otherwise({
 		redirectTo: '/index.html'
 	});

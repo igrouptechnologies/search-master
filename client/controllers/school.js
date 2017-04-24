@@ -1,6 +1,7 @@
 var myApp = angular.module('myApp');
 
-myApp.controller('SchoolsController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
+myApp.controller('SchoolsController', ['$scope', '$http', '$location', '$routeParams', 
+								function($scope, $http, $location, $routeParams){
 	console.log('SchoolsController loaded...');
 
 	$scope.getSchools = function(){
