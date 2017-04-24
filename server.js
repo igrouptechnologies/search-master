@@ -11,7 +11,7 @@ var Book =require('./models/book');
 var School= require('./models/school')
 var User= require('./models/user')
 
-var schoolapi = require('./api/routes/school');
+//var schoolapi = require('./api/routes/school');
 // Connect to Mongoose
 mongoose.connect('mongodb://localhost/wis');
 var db = mongoose.connection;
@@ -113,7 +113,7 @@ app.delete('/api/books/:_id', function(req, res){
 //-----------------schools----------------------
 
 app.get('/api/schools', function(req, res){
-	console.log("List of School-->");
+	console.log("-->List of School-->");
 	School.getSchools(function(err, schools){
 		if(err){
 			throw err;
@@ -143,6 +143,7 @@ app.get('/api/schools/:search', function(req, res){
 
 app.post('/api/schools', function(req, res){
 	var book = req.body;
+    console.log("Inside /api/schools");
 	School.addSchool(book, function(err, school){
 		if(err){
 			throw err;
