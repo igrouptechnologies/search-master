@@ -20,7 +20,7 @@ http://plnkr.co/edit/TQoIJ2?p=preview
  
 ```json
 school = {
-    "id": "POST_ID"
+    "id": "POST_ID",
     "name": "name", 
     "address": "address",
     "city":"city",
@@ -28,14 +28,17 @@ school = {
     "country":"country",
     "website": "abc.com",
     "email": ["email1", "email2"],
+    "phone": ["phone1", "phone2"],
     "likes": TOTAL_LIKES, 
-    follow:[{"follower1"},{"follower2"}]
-    comments: [	
-      {
-         "user":"COMMENT_BY",
-         "message": "TEXT",
-         "dateCreated": "DATE_TIME",
-         "like": "LIKES" 
-      }   ]
+    "follows":[{"follower":"follower1"},"follower":"follower2"}],
+    "socialmedia":[{"facebook":"facebook_page"},"pinterest":"pinterest_images"}],
+    "comments": [	
+       {
+          "user":"COMMENT_BY",
+          "message": "TEXT",
+          "dateCreated": "DATE_TIME",
+          "like": "LIKES" 
+       }   
+      ]
 }
 ```
