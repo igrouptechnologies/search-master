@@ -31,7 +31,7 @@ School
     "phone": ["phone1", "phone2"],
     "likes": "TOTAL_LIKES", 
     "follows":[{"follower":"follower1"},{"follower":"follower2"}],
-    "socialmedia":[{"facebook":"facebook_page"},"pinterest":"pinterest_images"}],
+    "socialmedia":[{"facebook":"facebook_page"},{"pinterest":"pinterest_images"}],
     "comments": [	
        {
           "user":"COMMENT_BY",
