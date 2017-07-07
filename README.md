@@ -19,6 +19,7 @@ http://plnkr.co/edit/TQoIJ2?p=preview
 
 
 JSON format : 
+```json
 school = {
   "name" :"test",
   "address":"test",
@@ -29,7 +30,5 @@ school = {
   "address":"test",
   "address":"test",
   "address":"test",
-  
-
 }
-
+```
