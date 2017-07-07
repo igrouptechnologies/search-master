@@ -17,30 +17,25 @@ Social to share Button :
 
 http://plnkr.co/edit/TQoIJ2?p=preview
 
-
-JSON format : 
+ 
 ```json
 school = {
-    _id: POST_ID
-    title: TITLE_OF_POST, 
-    description: POST_DESCRIPTION,
-    by: POST_BY,
-    url: URL_OF_POST,
-    tags: [TAG1, TAG2, TAG3],
-    likes: TOTAL_LIKES, 
+    "id": "POST_ID"
+    "name": "name", 
+    "address": "address",
+    "city":"city",
+    "state":"state",
+    "country":"country",
+    "website": "abc.com",
+    "email": ["email1", "email2"],
+    "likes": TOTAL_LIKES, 
+    follow:[{"follower1"},{"follower2"}]
     comments: [	
       {
-         user:'COMMENT_BY',
-         message: TEXT,
-         dateCreated: DATE_TIME,
-         like: LIKES 
-      },
-      {
-         user:'COMMENT_BY',
-         message: TEXT,
-         dateCreated: DATE_TIME,
-         like: LIKES
-      }
-   ]
+         "user":"COMMENT_BY",
+         "message": "TEXT",
+         "dateCreated": "DATE_TIME",
+         "like": "LIKES" 
+      }   ]
 }
 ```
