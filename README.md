@@ -20,7 +20,7 @@ http://plnkr.co/edit/TQoIJ2?p=preview
  
 ```json
 school = {
-    "id": "POST_ID",
+    "id": "id",
     "name": "name", 
     "address": "address",
     "city":"city",
