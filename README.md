@@ -29,10 +29,22 @@ school = {
     "website": "abc.com",
     "email": ["email1", "email2"],
     "phone": ["phone1", "phone2"],
-    "likes": TOTAL_LIKES, 
-    "follows":[{"follower":"follower1"},"follower":"follower2"}],
+    "likes": "TOTAL_LIKES", 
+    "follows":[{"follower":"follower1"},{"follower":"follower2"}],
     "socialmedia":[{"facebook":"facebook_page"},"pinterest":"pinterest_images"}],
     "comments": [	
+       {
+          "user":"COMMENT_BY",
+          "message": "TEXT",
+          "dateCreated": "DATE_TIME",
+          "like": "LIKES" 
+       },
+       {
+          "user":"COMMENT_BY",
+          "message": "TEXT",
+          "dateCreated": "DATE_TIME",
+          "like": "LIKES" 
+       },
        {
           "user":"COMMENT_BY",
           "message": "TEXT",
