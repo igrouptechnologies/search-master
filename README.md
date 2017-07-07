@@ -18,3 +18,18 @@ Social to share Button :
 http://plnkr.co/edit/TQoIJ2?p=preview
 
 
+JSON format : 
+school = {
+  "name" :"test",
+  "address":"test",
+  "address":"test",
+  "address":"test",
+  "address":"test",
+  "address":"test",
+  "address":"test",
+  "address":"test",
+  "address":"test",
+  
+
+}
+
