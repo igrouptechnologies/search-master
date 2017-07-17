@@ -32,27 +32,18 @@ School
     "likes": "TOTAL_LIKES", 
     "follows":[{"follower":"follower1"},{"follower":"follower2"}],
     "socialmedia":[{"facebook":"facebook_page"},{"pinterest":"pinterest_images"}],
-    "comments": [	
-       {
-          "user":"COMMENT_BY",
-          "message": "TEXT",
-          "dateCreated": "DATE_TIME",
-          "like": "LIKES" 
-       },
-       {
-          "user":"COMMENT_BY",
-          "message": "TEXT",
-          "dateCreated": "DATE_TIME",
-          "like": "LIKES" 
-       },
-       {
-          "user":"COMMENT_BY",
-          "message": "TEXT",
-          "dateCreated": "DATE_TIME",
-          "like": "LIKES" 
-       }   
-      ]
-}
+    "reviews": [
+        { 
+        "user": {"display_name": "Simon" },
+            "service": {
+                "rating": {
+                    "rating": "5"
+                },
+                "review": "Excellent"
+            }
+        },  
+       ]
+     }
 ```
 
 User : 
