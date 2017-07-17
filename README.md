@@ -34,14 +34,32 @@ School
     "socialmedia":[{"facebook":"facebook_page"},{"pinterest":"pinterest_images"}],
     "reviews": [
         { 
-        "user": {"display_name": "Simon" },
+        "user": {"display_name": "AAAA" },
             "service": {
                 "rating": {
                     "rating": "5"
                 },
                 "review": "Excellent"
             }
-        },  
+        },
+        { 
+        "user": {"display_name": "BBBB" },
+            "service": {
+                "rating": {
+                    "rating": "4"
+                },
+                "review": "Good"
+            }
+        },
+        { 
+        "user": {"display_name": "CCCC" },
+            "service": {
+                "rating": {
+                    "rating": "3"
+                },
+                "review": "Average"
+            }
+        }
        ]
      }
 ```
