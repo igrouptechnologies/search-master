@@ -118,3 +118,19 @@ School :
     "medium" : ["GSEB","CBSE","ICSE"]
 }
 ```
+
+Review :
+```json
+{
+    "user": {
+        "display_name": "Simon"
+    },
+    "service": {
+        "rating": {
+            "rating": "5"
+        },
+        "review": "Excellent"
+    }
+}
+```
+
