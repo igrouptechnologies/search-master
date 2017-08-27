@@ -105,8 +105,7 @@ User :
 School :
 ```json
 {
-
-    "_id" : ObjectId("58434da482139207a2bfbbab"),
+    "id":"58434da482139207a2bfbbab",
     "name" : "Padra High Schhol",
     "address" : "Statiion road",
     "city" : "Padra",
