@@ -101,3 +101,21 @@ User :
 }
 
 ```
+
+School :
+```json
+{
+
+    "_id" : ObjectId("58434da482139207a2bfbbab"),
+    "name" : "Padra High Schhol",
+    "address" : "Statiion road",
+    "city" : "Padra",
+    "state" : "GJ",
+    "students" : "60-131-9227",
+    "teachers" : "92-994-1933",
+    "email" : "jhernandez0@mapquest.com",
+    "website" : "jhernandez0@miibeian.gov.cn",
+    "phone" : "27-973-8142",
+    "medium" : ["GSEB","CBSE","ICSE"]
+}
+```
